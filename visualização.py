@@ -18,13 +18,13 @@ plt.ylabel('Qtd_Vendidos')
 plt.xticks(rotation=0)
 plt.show()
 
-x = df['Nota'].value_counts().index
-y = df['Nota'].value_counts().values
+# Gráfico de Pizza - Distribuição por Quantidade Vendida
+x = df['Qtd_Vendidos'].value_counts().index
+y = df['Qtd_Vendidos'].value_counts().values
 
-# Gráfico de Pizza
 plt.figure(figsize=(10, 6))
 plt.pie(y, labels=x, autopct='%.1f%%', startangle=90)
-plt.title('Distribuição por Nota')
+plt.title('Distribuição por Quantidade de Vendas')
 plt.show()
 
 # Gráfico Histograma
