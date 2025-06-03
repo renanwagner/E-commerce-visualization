@@ -1,95 +1,91 @@
-# E-commerce-visualization
+📊 Data Analysis and Visualization of Mercado Livre Products
+This project presents a complete pipeline for analyzing product data from Mercado Livre. It includes data preparation, cleaning, statistical analysis, and both static and interactive visualizations — all built with Python.
 
-markdown
-Copiar
-Editar
-# 📦 E-commerce Visualization
+📁 Project Structure
+preparação_dados.py
+Loads the dataset and performs initial cleaning, such as dropping unnecessary columns and filtering valid entries.
 
-This project presents an analysis of e-commerce data using two approaches:
+tratamento_dados.py
+Handles missing values, renames columns, converts data types, and prepares the dataset for analysis.
 
-- **Static Visualization** with Matplotlib and Seaborn
-- **Interactive Dashboard** with Plotly and Dash
+matemática_estatística.py
+Applies basic statistics (mean, median, mode, standard deviation) to identify trends and patterns in the dataset.
 
-It reveals patterns related to product sales by gender, rating distribution, the impact of discounts, number of reviews, and correlations — all in a clear and visual way.
+visualização.py
+Creates static charts using Matplotlib and Seaborn to explore relationships and distributions in the data.
 
----
+visualização_interativa.py
+Builds interactive charts with Plotly Express to make data exploration more engaging and intuitive.
 
-## 📁 Project Structure
+🎯 Key Objectives
+Transform raw data into clean, analysis-ready datasets.
 
-```bash
-ecommerce-visualization/
-│
-├── ecommerce_estatistica.csv       # E-commerce dataset
-├── visualização.py                 # Static visualizations with Matplotlib and Seaborn
-├── visualização_interativa.py     # Interactive dashboard with Plotly + Dash
-└── README.md                       # This file
-📊 Static Visualizations (visualização.py)
-Built with Matplotlib and Seaborn, this script generates:
+Apply descriptive statistics to uncover patterns and outliers.
 
-📊 Bar Chart: sales by gender
+Build dashboards and visualizations to communicate insights clearly.
 
-🥧 Pie Chart: product rating distribution
+Support decision-making with evidence from real marketplace data.
 
-📈 Histogram: number of reviews
+🧪 Technologies Used
+Python 3.10+
 
-🔵 Scatter Plot: rating vs number of reviews
+pandas, numpy – data manipulation
 
-🌊 Density Plot: price distribution
+matplotlib, seaborn – static data visualization
 
-📉 Regression Plot: discount vs number of reviews
-
-🔥 Heatmap: correlation between reviews and sales volume
-
-⚡ Interactive Dashboard (visualização_interativa.py)
-Built with Dash and Plotly, this dashboard allows users to explore:
-
-Interactive bar, pie, histogram, and scatter charts
-
-Price density distribution
-
-Regression line visualization
-
-Correlation heatmap between metrics
-
-<!-- Replace with an actual screenshot -->
+plotly.express – interactive visualizations
 
 ▶️ How to Run
-Clone the repository:
+Clone the repository
 
 bash
 Copiar
 Editar
-git clone https://github.com/your-username/ecommerce-visualization.git
-cd ecommerce-visualization
-Install dependencies:
+git clone https://github.com/your-user/your-repo.git
+cd your-repo
+Install the required libraries
+(or create a virtual environment first)
 
 bash
 Copiar
 Editar
 pip install -r requirements.txt
-Run the interactive dashboard:
+Run the scripts in the following order:
 
-bash
-Copiar
-Editar
-python visualização_interativa.py
-Open your browser and go to: http://127.0.0.1:8050
+preparação_dados.py
 
-🛠 Technologies Used
-Python
+tratamento_dados.py
 
-Pandas
+matemática_estatística.py
 
-Matplotlib
+visualização.py or visualização_interativa.py
 
-Seaborn
+📦 Dataset Description
+The dataset includes key attributes of fashion products from Mercado Livre:
 
-Plotly
+Product name, brand, gender, season, and material
 
-Dash
+Ratings and user comments
 
-Statsmodels (for OLS regression)
+Sales performance (Qtd_Vendidos – units sold)
 
-📈 Project Goal
-To provide data-driven insights through visual analysis, making it easier to understand customer behavior, product ratings, and the impact of promotional strategies in an e-commerce environment.
+💡 Sample Insights
+Which product categories have the highest sales volume
+
+Correlation between number of reviews and product ratings
+
+Most frequent brands and materials across genders and seasons
+
+Sales distribution by rating or price
+
+📈 Output Examples
+✔️ Pie and bar charts showing sales distribution
+✔️ Histograms for ratings and comment counts
+✔️ Scatter plots to explore relationships between metrics
+✔️ Interactive dashboards using Plotly for filtering and deeper analysis
+
+📄 License
+This project is under the MIT License. You are free to use, modify, and share it.
+
+
 
